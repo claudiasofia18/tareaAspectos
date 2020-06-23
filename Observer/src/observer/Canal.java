@@ -33,7 +33,8 @@ public class Canal implements Subject{
 	}
 
 	@Override
-	public String upload(String title) {
-		return title;
+	public List<Suscriptor> upload(String title) {
+		System.out.println("Se ha subido el video "+title);
+		return subs;
 	}
 }

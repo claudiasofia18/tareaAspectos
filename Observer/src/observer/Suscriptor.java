@@ -7,6 +7,10 @@ public class Suscriptor implements Observer {
 	public Suscriptor(String name) {
 		this.name = name;
 	}
+	
+	public String getName() {
+		return name;
+	}
 
 	@Override
 	public void update() {
@@ -14,8 +18,9 @@ public class Suscriptor implements Observer {
 	}
 	
 	@Override
-	public void canalsuscrito(Canal cn) {
+	public Canal canalsuscrito(Canal cn) {
 		canal=cn;
+		return cn;
 	}
 
 }

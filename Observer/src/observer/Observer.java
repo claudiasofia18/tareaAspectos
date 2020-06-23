@@ -4,6 +4,6 @@ public interface Observer {
 
 	void update();
 
-	void canalsuscrito(Canal cn);
+	Canal canalsuscrito(Canal cn);
 
 }

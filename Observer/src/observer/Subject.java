@@ -1,8 +1,10 @@
 package observer;
 
+import java.util.List;
+
 public interface Subject {
 
-	String upload(String title);
+	List<Suscriptor> upload(String title);
 	
 	void setEnVivo(boolean enVivo);
 	
