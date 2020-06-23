@@ -5,43 +5,35 @@ import java.util.*;
 
 public class Canal implements Subject{
 	private List<Suscriptor> subs = new ArrayList<>();
-	String title;
+	private String name;
+	private boolean enVivo;
 	
-	/* (non-Javadoc)
-	 * @see observer.Subject#suscrito(observer.Suscriptor)
-	 */
-	@Override
-	public void suscrito(Suscriptor sub) {
-		subs.add(sub);
-		
-}
-	
-	/* (non-Javadoc)
-	 * @see observer.Subject#unSuscrito(observer.Observer)
-	 */
-	@Override
-	public void unSuscrito(Observer sub) {
-		
-		subs.remove(sub);
-		
-		
+	public Canal(String name) {
+		this.name = name;
+		enVivo = false;
 	}
 	
-	/* (non-Javadoc)
-	 * @see observer.Subject#notificacion()
-	 */
-	@Override
-	public void notificacion() {
-		for(Observer sub: subs) {
-					sub.update();
+	//GETTERS Y SETTERS
+	public String getNameChannel() {
+		return name;
 	}
-		}
-	/* (non-Javadoc)
-	 * @see observer.Subject#upload(java.lang.String)
-	 */
+	
+	public List<Suscriptor> getSubs(){
+		return subs;
+	}
+	
+	public void setSubs(List<Suscriptor> subs) {
+		this.subs = subs;
+	}
+	
+	//OBSERVABLES
 	@Override
-	public void upload(String title) {
-		this.title = title;
-		notificacion();
+	public void setEnVivo(boolean enVivo) {
+		this.enVivo = enVivo;
+	}
+
+	@Override
+	public String upload(String title) {
+		return title;
 	}
 }
