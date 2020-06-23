@@ -6,6 +6,7 @@ public class Suscriptor implements Observer {
 	
 	public Suscriptor(String name) {
 		this.name = name;
+		this.canal = null;
 	}
 	
 	public String getName() {

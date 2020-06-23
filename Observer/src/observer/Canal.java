@@ -10,7 +10,7 @@ public class Canal implements Subject{
 	
 	public Canal(String name) {
 		this.name = name;
-		enVivo = false;
+		this.enVivo = false;
 	}
 	
 	//GETTERS Y SETTERS
