@@ -21,6 +21,7 @@ public class Suscriptor implements Observer {
 	@Override
 	public Canal canalsuscrito(Canal cn) {
 		canal=cn;
+		cn.getSubs().add(this);
 		return cn;
 	}
 

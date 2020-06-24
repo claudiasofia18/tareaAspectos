@@ -34,7 +34,7 @@ public class Canal implements Subject{
 
 	@Override
 	public List<Suscriptor> upload(String title) {
-		System.out.println("Se ha subido el video "+title);
+		System.out.println("\nSe ha subido el video "+ title);
 		return subs;
 	}
 }
