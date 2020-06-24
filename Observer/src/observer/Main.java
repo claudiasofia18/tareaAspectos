@@ -1,7 +1,6 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import observer.*;
-import ventana.ventana1;
 
 public class Main {
 	private static Canal cn;
@@ -33,9 +32,10 @@ public class Main {
         	while (!salir) {
                 System.out.println("\n1. Subir video");
                 System.out.println("2. En vivo");
-                System.out.println("3. Salir");
+                System.out.println("3. Numero de Suscriptores");
+                System.out.println("4. Salir");
                 try {
-                    System.out.println("\nEscribe una de las opciones");
+                    System.out.println("\nElegir una opcion");
                     opcion = sn.nextInt();
                     switch (opcion) {
                         case 1:
@@ -47,6 +47,9 @@ public class Main {
                         	cn.setEnVivo(true);
                             break;
                         case 3:
+                        	cn.numSuscriptores(cn.getSubs());
+                            break;
+                        case 4:
                             salir = true;
                             break;
                         default:

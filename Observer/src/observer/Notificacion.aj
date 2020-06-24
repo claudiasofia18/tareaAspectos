@@ -4,7 +4,7 @@ import observer.*;
 public aspect Notificacion {
 	after() returning(List<Suscriptor> subs): execution(List<Suscriptor> upload(String)) {
 		for(int i = 0;i<subs.size();i++) {
-			System.out.println("Se ha subido un nuevo video!!! Miralo ya!! "+ subs.get(i).getName());	
+			System.out.println("Se ha subido un nuevo video!!!"+ subs.get(i).getName()+" Miralo ya!! ");	
 		}			
 	}
 	
@@ -17,5 +17,11 @@ public aspect Notificacion {
 	}
 		
 	
+	//Implementacion de nueva funcionalidad.
+	pointcut numSuss(): call( int numSuscriptores (List<Suscriptor> ));
+	after() returning(int nunSus):numSuss(){
+		System.out.println("Felicidades!!!!!! su canala cuenta con "+nunSus+" suscriptores");
+		
+	}
 	
 }

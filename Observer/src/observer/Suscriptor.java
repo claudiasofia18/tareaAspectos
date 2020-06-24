@@ -24,5 +24,7 @@ public class Suscriptor implements Observer {
 		cn.getSubs().add(this);
 		return cn;
 	}
+	
+	
 
 }

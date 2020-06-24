@@ -37,4 +37,8 @@ public class Canal implements Subject{
 		System.out.println("\nSe ha subido el video "+ title);
 		return subs;
 	}
+	
+	public int numSuscriptores (List<Suscriptor> subs) {
+		return subs.size();
+	}
 }
