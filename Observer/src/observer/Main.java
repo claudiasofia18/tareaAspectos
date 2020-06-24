@@ -1,11 +1,14 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import observer.*;
+import ventana.ventana1;
 
 public class Main {
 	private static Canal cn;
 	
     public static void main(String[] args) {
+    	Ventana v1= new Ventana();
+		v1.setVisible(true);
         init();
         menu();
     }
